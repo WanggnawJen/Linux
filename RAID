@@ -1,0 +1,8 @@
+cat  /proc/mdstat
+
+mdadm  --manage /dev/md1   --fail  /dev/sdd
+
+mdadm  --manage /dev/md1   --remove /dev/sdd
+
+mdadm   --manage  /dev/md1    --add  /dev/sdd
+
