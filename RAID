@@ -6,3 +6,14 @@ mdadm  --manage /dev/md1   --remove /dev/sdd
 
 mdadm   --manage  /dev/md1    --add  /dev/sdd
 
+
+
+mdadm --stop /dev/md1
+
+mdadm --fail /dev/sdb --remove /dev/sdb
+mdadm --fail /dev/sdc --remove /dev/sdc
+dd if=/dev/zero  of=/dev/sdb  bs=64K
+dd if=/dev/zero  of=/dev/sdc  bs=64K
+cat  /proc/mdstat
+lsblk  -f
+
