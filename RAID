@@ -16,4 +16,5 @@ dd if=/dev/zero  of=/dev/sdb  bs=64K
 dd if=/dev/zero  of=/dev/sdc  bs=64K
 cat  /proc/mdstat
 lsblk  -f
-
+mdadm --examine  /dev/sdb
+mdadm --examine  /dev/sdc
