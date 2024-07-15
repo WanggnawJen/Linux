@@ -1,0 +1,14 @@
+insmod   lvm
+
+ls
+
+cat (lvm/rhel-root)/etc/fstab
+
+set  root=(lvm/rhel-root)
+
+linux  (hd0,msdos1)/vmlinuz-5.14.0-162.6.1.el9_1.x86_64   root=/dev/mapper/rhel-root
+
+initrd  (hd0,msdos1)/initramfs-5.14.0-162.6.1.el9_1.x86_64.img
+
+boot
+
